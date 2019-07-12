@@ -1,0 +1,13 @@
+@import 'config'; //Project-level config (pulls in each individual component config?)
+@import 'theme'; // Project-level theme (pulls in each individual component theme?)
+
+@import 'foundry'; // This is the root file in our foundry-css package - any vars left in here have the !default flag; they only count if they haven't been been in the configs/themes above
+
+/*
+ * Add your own extensions and bespoke SCSS modules here;
+ *
+ * i.e. @import 'blocks/Button/button'; // Example import for project-level button classes
+ * 
+ */
+
+@import 'shame';
