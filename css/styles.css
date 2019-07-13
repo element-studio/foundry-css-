@@ -80,7 +80,6 @@
 /* Font sizes */
 /* Font weights */
 /* Borders */
-/* Page & content widths */
 /* Rhythm & Padding */
 /* z-index */
 /*
@@ -247,32 +246,39 @@ input[type="search"]::-webkit-search-results-decoration {
  * Horizontally centers an element and constrains it to one of our $page-container widths 
  * from _theme.scss.
  */
+/*
+ * Container Config
+ *
+ * 1. Sizes
+ *
+ */
 .container {
-  position: relative;
-  display: block;
   margin-left: auto;
   margin-right: auto;
   padding-left: 3rem;
-  padding-right: 3rem; }
+  padding-right: 3rem;
+  max-width: 72rem; }
 
-.container--flush {
-  padding-left: 0;
-  padding-right: 0; }
-
+/* Sizes */
 .container--xsmall {
   max-width: 30rem; }
 
 .container--small {
   max-width: 60rem; }
 
-.container--medium {
+.container--normal {
   max-width: 72rem; }
 
-.container--large {
+.container--medium {
   max-width: 84rem; }
 
-.container--xlarge {
+.container--large {
   max-width: 90rem; }
+
+/* Modifiers */
+.container--flush {
+  padding-left: 0;
+  padding-right: 0; }
 
 /*
  * Some layout classes, to quickly utilise the Flexible Box Model (Flexbox) to slay linear items out.
@@ -349,18 +355,34 @@ input[type="search"]::-webkit-search-results-decoration {
  * Wrappers:
  * Wrap an element in top and bottom padding.
  */
+/*
+ * Wrapper Config
+ *
+ * 1. Sizes
+ *
+ */
 .wrapper {
   padding-top: 3rem;
   padding-bottom: 3rem; }
 
+/* Sizes */
 .wrapper--small {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem; }
+
+.wrapper--normal {
+  padding-top: 3rem;
+  padding-bottom: 3rem; }
+
+.wrapper--medium {
+  padding-top: 4rem;
+  padding-bottom: 4rem; }
 
 .wrapper--large {
   padding-top: 6rem;
   padding-bottom: 6rem; }
 
+/* Modifiers */
 .wrapper--top-only {
   padding-bottom: 0; }
 
@@ -477,7 +499,7 @@ input[type="search"]::-webkit-search-results-decoration {
  * Ready-to-roll confiigurable shapes for user/profile images.
  */
 /*
- * Button Config
+ * Avatar Config
  *
  * 1. Sizes
  * 2. Border Radius
@@ -673,7 +695,7 @@ input[type="search"]::-webkit-search-results-decoration {
  * Premade style for the classic <hr> element. Simple!
  */
 /*
- * Card Config
+ * Horizontal Rule Config
  *
  * 1. Weights (Thickness)
  * 2. Widths
@@ -777,7 +799,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .icon {
   width: 1em;
   height: 1em;
-  font-size: 2rem;
+  font-size: 1.5rem;
   display: inline-block;
   vertical-align: middle; }
 
@@ -838,10 +860,10 @@ input[type="search"]::-webkit-search-results-decoration {
   font-size: 1rem; }
 
 .icon--normal {
-  font-size: 2rem; }
+  font-size: 1.5rem; }
 
 .icon--large {
-  font-size: 3rem; }
+  font-size: 2.25rem; }
 
 /*
  * Overlay
@@ -960,38 +982,107 @@ input[type="search"]::-webkit-search-results-decoration {
  * A tag can be used to highlight metadata such as a category or status.
  *
  */
+/*
+ * Tag Config
+ *
+ * 1. Colors
+ * 2. Border Radius
+ * 3. Sizes
+ * 4. Label Weight
+ * 5. Label Leading
+ *
+ */
 .tag {
   display: inline-block;
-  padding: 0.5rem;
+  border-radius: 1.2rem;
+  padding: 0.25rem 1rem;
   background-color: #4A4A4A;
   color: #FFFFFF; }
 
+/* Colors */
+.tag--base {
+  color: #4A4A4A;
+  background-color: rgba(74, 74, 74, 0.15); }
+
+.tag--canvas {
+  color: #FAFAFA;
+  background-color: rgba(250, 250, 250, 0.15); }
+
+.tag--white {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.15); }
+
 .tag--alpha {
-  background-color: #F55236; }
+  color: #F55236;
+  background-color: rgba(245, 82, 54, 0.15); }
 
 .tag--beta {
-  background-color: #638DB4; }
+  color: #638DB4;
+  background-color: rgba(99, 141, 180, 0.15); }
 
 .tag--gamma {
-  background-color: #3E5168; }
+  color: #3E5168;
+  background-color: rgba(62, 81, 104, 0.15); }
 
-.tag--error {
-  background-color: #D17580; }
+.tag--dark {
+  color: #777777;
+  background-color: rgba(119, 119, 119, 0.15); }
 
-.tag--warning {
-  background-color: #EFBC68; }
+.tag--mid {
+  color: #9B9B9B;
+  background-color: rgba(155, 155, 155, 0.15); }
+
+.tag--light {
+  color: #D8D8D8;
+  background-color: rgba(216, 216, 216, 0.15); }
+
+.tag--shade {
+  color: #DEDEDE;
+  background-color: rgba(222, 222, 222, 0.15); }
 
 .tag--success {
-  background-color: #AAD091; }
+  color: #AAD091;
+  background-color: rgba(170, 208, 145, 0.15); }
+
+.tag--warning {
+  color: #EFBC68;
+  background-color: rgba(239, 188, 104, 0.15); }
+
+.tag--error {
+  color: #D17580;
+  background-color: rgba(209, 117, 128, 0.15); }
 
 .tag--info {
-  background-color: #9CC9DF; }
+  color: #9CC9DF;
+  background-color: rgba(156, 201, 223, 0.15); }
+
+.tag--facebook {
+  color: #3b5998;
+  background-color: rgba(59, 89, 152, 0.15); }
+
+.tag--twitter {
+  color: #1da1f2;
+  background-color: rgba(29, 161, 242, 0.15); }
+
+.tag--linkedin {
+  color: #0077b5;
+  background-color: rgba(0, 119, 181, 0.15); }
 
 /*
  * Tooltip:
  *
  * Tooltips are for displaying small pieces of contextual information, usually when hovering
  * the parent element.
+ */
+/*
+ * Tooltip Config
+ *
+ * 1. Colors
+ * 2. Border Radius
+ * 3. Sizes
+ * 4. Label Weight
+ * 5. Label Leading
+ *
  */
 .tooltip {
   position: absolute;
@@ -1081,62 +1172,118 @@ input[type="search"]::-webkit-search-results-decoration {
  * Alert
  * Alert boxes are for drawing attention to important information. 
  */
+/*
+ * Alert Config
+ *
+ * 1. Colors
+ * 2. Borders
+ * 3. Sizes
+ * 4. Shadows
+ *
+ */
 .alert {
   position: relative;
-  display: block;
   background-color: #FFFFFF;
-  border-top: 5px solid #4A4A4A;
-  padding: 1rem; }
-  @media only screen and (min-width: 481px) {
-    .alert {
-      padding: 2rem 2rem 2rem 5rem; } }
+  border-radius: 0.5rem;
+  padding: 1.5rem 1.5rem 1.5rem calc(1.5rem + 4px);
+  box-shadow: 0 30px 30px 0 rgba(74, 74, 74, 0.125);
+  fill: #4A4A4A; }
+  .alert:before {
+    content: '';
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #4A4A4A;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem; }
 
-.alert__title {
-  margin: 0;
-  padding-left: 2.25rem;
-  font-size: 1rem;
-  line-height: 1.5; }
-  @media only screen and (min-width: 481px) {
-    .alert__title {
-      padding: 0; } }
+/* Colors */
+.alert--base {
+  fill: #4A4A4A; }
+  .alert--base:before {
+    background-color: #4A4A4A; }
 
-.alert__content > * + * {
-  margin-top: 3rem; }
+.alert--canvas {
+  fill: #FAFAFA; }
+  .alert--canvas:before {
+    background-color: #FAFAFA; }
 
-.alert__icon {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  font-size: 1.5rem; }
-  @media only screen and (min-width: 481px) {
-    .alert__icon {
-      top: 2rem;
-      left: 2rem; } }
+.alert--white {
+  fill: #FFFFFF; }
+  .alert--white:before {
+    background-color: #FFFFFF; }
 
-.alert__close {
-  position: absolute;
-  top: 50%;
-  right: 1rem;
-  fill: #4A4A4A;
-  margin-top: -8px;
-  cursor: pointer; }
+.alert--alpha {
+  fill: #F55236; }
+  .alert--alpha:before {
+    background-color: #F55236; }
 
-/* Modifiers */
-.alert--error {
-  border-color: #D17580;
-  fill: #D17580; }
+.alert--beta {
+  fill: #638DB4; }
+  .alert--beta:before {
+    background-color: #638DB4; }
 
-.alert--warning {
-  border-color: #EFBC68;
-  fill: #EFBC68; }
+.alert--gamma {
+  fill: #3E5168; }
+  .alert--gamma:before {
+    background-color: #3E5168; }
+
+.alert--dark {
+  fill: #777777; }
+  .alert--dark:before {
+    background-color: #777777; }
+
+.alert--mid {
+  fill: #9B9B9B; }
+  .alert--mid:before {
+    background-color: #9B9B9B; }
+
+.alert--light {
+  fill: #D8D8D8; }
+  .alert--light:before {
+    background-color: #D8D8D8; }
+
+.alert--shade {
+  fill: #DEDEDE; }
+  .alert--shade:before {
+    background-color: #DEDEDE; }
 
 .alert--success {
-  border-color: #AAD091;
   fill: #AAD091; }
+  .alert--success:before {
+    background-color: #AAD091; }
+
+.alert--warning {
+  fill: #EFBC68; }
+  .alert--warning:before {
+    background-color: #EFBC68; }
+
+.alert--error {
+  fill: #D17580; }
+  .alert--error:before {
+    background-color: #D17580; }
 
 .alert--info {
-  border-color: #9CC9DF;
   fill: #9CC9DF; }
+  .alert--info:before {
+    background-color: #9CC9DF; }
+
+.alert--facebook {
+  fill: #3b5998; }
+  .alert--facebook:before {
+    background-color: #3b5998; }
+
+.alert--twitter {
+  fill: #1da1f2; }
+  .alert--twitter:before {
+    background-color: #1da1f2; }
+
+.alert--linkedin {
+  fill: #0077b5; }
+  .alert--linkedin:before {
+    background-color: #0077b5; }
 
 /*
  * Dialog
@@ -1502,9 +1649,6 @@ input[type="search"]::-webkit-search-results-decoration {
   background-position: center center;
   background-repeat: no-repeat; }
 
-.tag {
-  border-radius: 0.2rem; }
-
 /*
  * Clearfix
  *
@@ -1564,3 +1708,15 @@ input[type="search"]::-webkit-search-results-decoration {
 
 #icons-demo .icon {
   margin: 0 2rem 2rem 0; }
+
+#tags-demo .tag {
+  margin: 0 1rem 1rem 0; }
+
+#alerts-demo {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem; }
+
+body {
+  padding-bottom: 6rem; }

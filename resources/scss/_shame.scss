@@ -23,3 +23,16 @@
 #icons-demo .icon {
 	margin:0 2rem 2rem 0;
 }
+
+#tags-demo .tag {
+	margin:0 1rem 1rem 0;
+}
+
+#alerts-demo {
+	display:grid;
+	grid-template-columns: repeat(3, 33%);
+	grid-column-gap:2rem;
+	grid-row-gap:2rem;
+}
+
+body { padding-bottom:$rhythm-large }
