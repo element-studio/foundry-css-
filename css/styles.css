@@ -1,39 +1,56 @@
 @charset "UTF-8";
 /**
- * _config.scss
- * Foundry's high level configuration file
- * The values contained in this file are all defaults, and can/should be overridden in you app theme. These simply allow foundary to work out of the box
- */
-/**
- * Breakpoints
- *
- * Foundry works mobile-first, so the majority of our media queries are based on min-width;
- * These breakpoints represent the lower bound of a media query or grid layout
- * Accessed via eg. `map-get($breakpoints, 'large')`
- */
-/*
- * Paths
- * Commonly used paths for locating image assets, font files, etc.
- */
-/**
  * _theme.scss
  * Contains variables for cosmetic look-and-feel attributes such as colour and font declarations.
  * All variables are prefixed by type for organisation, and for easier identification when looking back through code later.
  *
- * Variables uncommented and used here will override defaults set in node_modules/element-foundry/_theme.scss.
+ * 1. Document Setup
+ * 2. Typography
+ * 3. Colours
+ * 4. Common Border Radii
+ * 5. Layers
  *
  */
-/* Colours */
 /*
- * Gradients
+ * 1. Document Setup
+ * 
+ * Set the base font-size and line-height for the project, as well as establish a value for 
+ * rhythm and spacing.
  */
-/* Font families */
-/* Font sizes */
-/* Font weights */
-/* Borders */
-/* Page & content widths */
-/* Rhythm & Padding */
-/* z-index */
+/*
+ * 2. Typography
+ * 
+ * Set font declarations, font-sizes and font-weights. 
+ *
+ */
+/*
+ * 3. Colours
+ * 
+ * Colours are stored in pairs in a SASS map - each pair contains a theme colour, as well
+ * as a corresponding colour for use in text to ensure proper contrast.
+ * 
+ * Gradients are stored in a seperate SASS map as they need to be accessed differently. 
+ *
+ */
+/*
+ * 4. Common Border Radii
+ * 
+ * Set any commonly used border-radius declarations. 
+ *
+ */
+/*
+ * 5. Layers
+ * 
+ * We store all z-index values in a SASS map under human-readable keys to avoid the usual 
+ * trial and error or 'z-index:9999' nonsense.
+ *
+ */
+/*
+ * 6. Paths
+ *
+ * Commonly used paths for locating image assets, font files, etc.
+ * 
+ */
 /* --------------------------------
  *
  * Foundry CSS
@@ -45,43 +62,69 @@
  * --------------------------------
  */
 /*
- * 0. Configuration & Theming
+ * 0. Configuration
  * Nearly everything within Foundry relies on two configuration files, we'll grab those first.
- */
-/**
- * _config.scss
- * Foundry's high level configuration file
- * The values contained in this file are all defaults, and can/should be overridden in you app theme. These simply allow foundary to work out of the box
- */
-/**
- * Breakpoints
- *
- * Foundry works mobile-first, so the majority of our media queries are based on min-width;
- * These breakpoints represent the lower bound of a media query or grid layout
- * Accessed via eg. `map-get($breakpoints, 'large')`
- */
-/*
- * Paths
- * Commonly used paths for locating image assets, font files, etc.
  */
 /**
  * _theme.scss
  * Contains variables for cosmetic look-and-feel attributes such as colour and font declarations.
  * All variables are prefixed by type for organisation, and for easier identification when looking back through code later.
  *
- * Variables uncommented and used here will override defaults set in node_modules/element-foundry/_theme.scss.
+ * 1. Document Setup
+ * 2. Typography
+ * 3. Colours
+ * 4. Common Border Radii
+ * 5. Layers
+ * 6. Responsive breakpoints
  *
  */
-/* Colours */
 /*
- * Gradients
+ * 1. Document Setup
+ * 
+ * Set the base font-size and line-height for the project, as well as establish a value for 
+ * rhythm and spacing.
  */
-/* Font families */
-/* Font sizes */
-/* Font weights */
-/* Borders */
-/* Rhythm & Padding */
-/* z-index */
+/*
+ * 2. Typography
+ * 
+ * Set font declarations, font-sizes and font-weights. 
+ *
+ */
+/*
+ * 3. Colours
+ * 
+ * Colours are stored in pairs in a SASS map - each pair contains a theme colour, as well
+ * as a corresponding colour for use in text to ensure proper contrast.
+ * 
+ * Gradients are stored in a seperate SASS map as they need to be accessed differently. 
+ *
+ */
+/*
+ * 4. Common Border Radii
+ * 
+ * Set any commonly used border-radius declarations. 
+ *
+ */
+/*
+ * 5. Layers
+ * 
+ * We store all z-index values in a SASS map under human-readable keys to avoid the usual 
+ * trial and error or 'z-index:9999' nonsense.
+ *
+ */
+/**
+ * 6. Breakpoints
+ *
+ * Foundry works mobile-first, so the majority of our media queries are based on min-width;
+ * These breakpoints represent the lower bound of a media query or grid layout
+ * Accessed via eg. `map-get($breakpoints, 'large')`
+ */
+/*
+ * 7. Paths
+ *
+ * Commonly used paths for locating image assets, font files, etc.
+ * 
+ */
 /*
  * 1. Base
  * The 'engine' of Foundry. Base is a collection of settings, mixins, functions, and resets, which acts as a
@@ -106,6 +149,11 @@
 /*
  * Upper Bound
  * Select the last item in a range 
+ */
+/*
+ * Rhythm
+ * The rhythm function takes our $document-rhythm variable and multiplies by a number
+ * passed as an optional parameter. 
  */
 /*
  * Ellipsis
@@ -143,10 +191,12 @@ html, body {
   min-height: 100%;
   scroll-behavior: smooth; }
 
+body, p, fieldset, dialog {
+  margin: 0; }
+
 body {
-  margin: 0;
   font-family: "museo-sans", Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.6;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -175,9 +225,6 @@ h5 {
 h6 {
   font-size: 1rem; }
 
-p {
-  margin: 0; }
-
 p + p {
   margin-top: 1rem; }
 
@@ -190,18 +237,11 @@ a {
 strong {
   font-weight: 700; }
 
-address {
-  font-style: normal; }
-
-img {
-  display: block;
-  width: 100%; }
-
-input, select, button {
+input, button, select, option, textarea {
+  font-size: 100%;
   font-family: inherit; }
 
 fieldset, dialog {
-  margin: 0;
   padding: 0;
   border: none; }
 
@@ -233,13 +273,13 @@ input[type="search"]::-webkit-search-results-decoration {
  * A class to manage horizontal rhythm.
  */
 .breathe > * + * {
-  margin-left: 3rem; }
+  margin-left: 2rem; }
 
 .breathe--small > * + * {
-  margin-left: 0.75rem; }
+  margin-left: 0.5rem; }
 
 .breathe--large > * + * {
-  margin-left: 6rem; }
+  margin-left: 4rem; }
 
 /*
  * Container:
@@ -255,8 +295,8 @@ input[type="search"]::-webkit-search-results-decoration {
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   max-width: 72rem; }
 
 /* Sizes */
@@ -337,13 +377,13 @@ input[type="search"]::-webkit-search-results-decoration {
  * A class to manage vertical rhythm.
  */
 .flow > * + * {
-  margin-top: 3rem; }
+  margin-top: 2rem; }
 
 .flow--small > * + * {
-  margin-top: 1.5rem; }
+  margin-top: 1rem; }
 
 .flow--large > * + * {
-  margin-top: 6rem; }
+  margin-top: 4rem; }
 
 /*
  * Grid
@@ -394,7 +434,7 @@ input[type="search"]::-webkit-search-results-decoration {
  * Honestly there's no prizes for guessing what this is. 
  */
 .wysiwyg > * + * {
-  margin-top: 3rem; }
+  margin-top: 2rem; }
 
 /*
  * Typography Properties
@@ -411,7 +451,7 @@ input[type="search"]::-webkit-search-results-decoration {
   color: #FFFFFF; }
 
 .color--alpha {
-  color: #F55236; }
+  color: #EA4D52; }
 
 .color--beta {
   color: #638DB4; }
@@ -510,7 +550,7 @@ input[type="search"]::-webkit-search-results-decoration {
   display: inline-block;
   width: 5rem;
   max-width: 100%;
-  border-radius: 0.4rem; }
+  border-radius: 0.75rem; }
 
 /* Sizes */
 .avatar--small {
@@ -577,8 +617,8 @@ input[type="search"]::-webkit-search-results-decoration {
   border-color: #FFFFFF; }
 
 .button--alpha {
-  background-color: #F55236;
-  border-color: #F55236; }
+  background-color: #EA4D52;
+  border-color: #EA4D52; }
 
 .button--beta {
   background-color: #638DB4;
@@ -704,7 +744,7 @@ input[type="search"]::-webkit-search-results-decoration {
  */
 .hr {
   border: none;
-  margin: 3rem 0;
+  margin: 2rem 0;
   height: 0.25rem;
   width: 12.5rem;
   background-color: #4A4A4A; }
@@ -740,7 +780,7 @@ input[type="search"]::-webkit-search-results-decoration {
   background-color: #FFFFFF; }
 
 .hr--alpha {
-  background-color: #F55236; }
+  background-color: #EA4D52; }
 
 .hr--beta {
   background-color: #638DB4; }
@@ -814,7 +854,7 @@ input[type="search"]::-webkit-search-results-decoration {
   fill: #FFFFFF; }
 
 .icon--alpha {
-  fill: #F55236; }
+  fill: #EA4D52; }
 
 .icon--beta {
   fill: #638DB4; }
@@ -879,7 +919,7 @@ input[type="search"]::-webkit-search-results-decoration {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 3rem 0; }
+  padding: 2rem 0; }
 
 .overlay__backdrop {
   position: absolute;
@@ -1013,8 +1053,8 @@ input[type="search"]::-webkit-search-results-decoration {
   background-color: rgba(255, 255, 255, 0.15); }
 
 .tag--alpha {
-  color: #F55236;
-  background-color: rgba(245, 82, 54, 0.15); }
+  color: #EA4D52;
+  background-color: rgba(234, 77, 82, 0.15); }
 
 .tag--beta {
   color: #638DB4;
@@ -1078,83 +1118,83 @@ input[type="search"]::-webkit-search-results-decoration {
  * Tooltip Config
  *
  * 1. Colors
- * 2. Border Radius
- * 3. Sizes
- * 4. Label Weight
- * 5. Label Leading
+ * 2. Font Size
+ * 3. Border Radius
+ * 4. Sizes
+ * 5. Margin (distance from parent)
+ * 6. Tail Size
+ * 7. Enable Default Transitions
  *
  */
 .tooltip {
   position: absolute;
   margin: 0;
-  padding: 1rem;
+  padding: 0.33rem 0.66rem;
   background-color: #4A4A4A;
   color: #FFFFFF;
+  border-radius: 1.2rem;
   pointer-events: none;
+  font-size: 0.8rem;
   white-space: nowrap;
-  font-size: 1rem;
-  font-stretch: normal;
   line-height: 1; }
   .tooltip:before {
     content: '';
     position: absolute; }
 
 /* Directions */
-.tooltip--up {
-  bottom: calc(100% + 0.25rem);
+.tooltip--up, .tooltip--down {
   left: 50%;
   transform: translateX(-50%); }
+  .tooltip--up:before, .tooltip--down:before {
+    left: 50%;
+    transform: translateX(-50%); }
+
+.tooltip--left, .tooltip--right {
+  top: 50%;
+  transform: translateY(-50%); }
+  .tooltip--left:before, .tooltip--right:before {
+    top: 50%;
+    transform: translateY(-50%); }
+
+.tooltip--up {
+  bottom: calc(100% + 0.25rem); }
   .tooltip--up:before {
     border-style: solid;
     height: 0;
     width: 0;
     border-color: #4A4A4A transparent transparent;
-    border-width: 5px 4px 0;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%); }
+    border-width: 6px 5px 0;
+    top: 100%; }
 
 .tooltip--right {
-  left: calc(100% + 0.75rem);
-  top: 50%;
-  transform: translateY(-50%); }
+  left: calc(100% + 0.25rem); }
   .tooltip--right:before {
     border-style: solid;
     height: 0;
     width: 0;
     border-color: transparent #4A4A4A transparent transparent;
-    border-width: 4px 5px 4px 0;
-    right: 100%;
-    top: 50%;
-    transform: translateY(-50%); }
+    border-width: 5px 6px 5px 0;
+    right: calc(100% - 1px); }
 
 .tooltip--down {
-  top: calc(100% + 0.25rem);
-  left: 50%;
-  transform: translateX(-50%); }
+  top: calc(100% + 0.25rem); }
   .tooltip--down:before {
     border-style: solid;
     height: 0;
     width: 0;
     border-color: transparent transparent #4A4A4A;
-    border-width: 0 4px 5px;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%); }
+    border-width: 0 5px 6px;
+    bottom: 100%; }
 
 .tooltip--left {
-  right: calc(100% + 0.75rem);
-  top: 50%;
-  transform: translateY(-50%); }
+  right: calc(100% + 0.25rem); }
   .tooltip--left:before {
     border-style: solid;
     height: 0;
     width: 0;
     border-color: transparent transparent transparent #4A4A4A;
-    border-width: 4px 0 4px 5px;
-    left: 100%;
-    top: 50%;
-    transform: translateY(-50%); }
+    border-width: 5px 0 5px 6px;
+    left: calc(100% + 1px); }
 
 /* Parent Helper Class */
 ._has-tooltip {
@@ -1185,7 +1225,7 @@ input[type="search"]::-webkit-search-results-decoration {
   position: relative;
   background-color: #FFFFFF;
   border-radius: 0.5rem;
-  padding: 1.5rem 1.5rem 1.5rem calc(1.5rem + 4px);
+  padding: 1rem 1rem 1rem calc(1rem + 4px);
   box-shadow: 0 30px 30px 0 rgba(74, 74, 74, 0.125);
   fill: #4A4A4A; }
   .alert:before {
@@ -1216,9 +1256,9 @@ input[type="search"]::-webkit-search-results-decoration {
     background-color: #FFFFFF; }
 
 .alert--alpha {
-  fill: #F55236; }
+  fill: #EA4D52; }
   .alert--alpha:before {
-    background-color: #F55236; }
+    background-color: #EA4D52; }
 
 .alert--beta {
   fill: #638DB4; }
@@ -1465,19 +1505,86 @@ input[type="search"]::-webkit-search-results-decoration {
 /*
  * Hero:
  *
- * For displaying large, image-based headers at the top of a page.
+ * Large page headers containing a background color or background image.
+ */
+/*
+ * Button Config
+ *
+ * 1. Colors
+ * 2. Border Radius
+ * 3. Sizes
+ * 4. Label Weight
+ * 5. Label Leading
+ *
  */
 .hero {
   position: relative;
-  padding: 2rem; }
-  .hero:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.25); }
+  padding: 6rem 0; }
+
+/* Colors */
+.hero--base {
+  background-color: #4A4A4A; }
+
+.hero--canvas {
+  background-color: #FAFAFA; }
+
+.hero--white {
+  background-color: #FFFFFF; }
+
+.hero--alpha {
+  background-color: #EA4D52; }
+
+.hero--beta {
+  background-color: #638DB4; }
+
+.hero--gamma {
+  background-color: #3E5168; }
+
+.hero--dark {
+  background-color: #777777; }
+
+.hero--mid {
+  background-color: #9B9B9B; }
+
+.hero--light {
+  background-color: #D8D8D8; }
+
+.hero--shade {
+  background-color: #DEDEDE; }
+
+.hero--success {
+  background-color: #AAD091; }
+
+.hero--warning {
+  background-color: #EFBC68; }
+
+.hero--error {
+  background-color: #D17580; }
+
+.hero--info {
+  background-color: #9CC9DF; }
+
+.hero--facebook {
+  background-color: #3b5998; }
+
+.hero--twitter {
+  background-color: #1da1f2; }
+
+.hero--linkedin {
+  background-color: #0077b5; }
+
+/* Sizes */
+.hero--small {
+  padding: 4rem 0; }
+
+.hero--normal {
+  padding: 6rem 0; }
+
+.hero--normal-offet {
+  padding: 9rem 0 3rem; }
+
+.hero--fullheight {
+  min-height: 100vh; }
 
 /*
  * Read More (Has JS dependency)
@@ -1695,6 +1802,10 @@ input[type="search"]::-webkit-search-results-decoration {
  * Need to write something hacky or smelly that you honestly intend to re-factor later? Dump it in here. But tidy up after yourself!
  * 
  */
+.foundry__section {
+  display: grid;
+  grid-template-columns: 1fr 3fr; }
+
 #avatar-demo .avatar {
   margin: 0 2rem 2rem 0; }
 
@@ -1703,8 +1814,8 @@ input[type="search"]::-webkit-search-results-decoration {
 
 #cards-demo {
   display: grid;
-  grid-template-columns: repeat(4, 25%);
-  grid-column-gap: 2rem; }
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem; }
 
 #icons-demo .icon {
   margin: 0 2rem 2rem 0; }
@@ -1712,11 +1823,16 @@ input[type="search"]::-webkit-search-results-decoration {
 #tags-demo .tag {
   margin: 0 1rem 1rem 0; }
 
+#tooltips-demo .button {
+  margin: 0 1rem 1rem 0; }
+
+#tooltips-demo .tooltip {
+  z-index: 1; }
+
 #alerts-demo {
   display: grid;
-  grid-template-columns: repeat(3, 33%);
-  grid-column-gap: 2rem;
-  grid-row-gap: 2rem; }
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem; }
 
 body {
   padding-bottom: 6rem; }
