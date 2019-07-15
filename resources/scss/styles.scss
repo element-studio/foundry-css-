@@ -1,7 +1,8 @@
-@import 'config'; //Project-level config (pulls in each individual component config?)
-@import 'theme'; // Project-level theme (pulls in each individual component theme?)
+// Project-level theme (pulls in each individual component theme?)
+@import 'theme'; 
 
-@import 'foundry'; // This is the root file in our foundry-css package - any vars left in here have the !default flag; they only count if they haven't been been in the configs/themes above
+// This is the root file in our foundry-css package - any vars left in here have the !default flag; they only count if they haven't been been set in the configs/themes above
+@import 'foundry'; 
 
 /*
  * Add your own extensions and bespoke SCSS modules here;
@@ -10,4 +11,5 @@
  * 
  */
 
+ // Where problem pong CSS lives
 @import 'shame';

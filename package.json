@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/element-studio/foundry-css#readme",
   "scripts": {
-    "build": "node-sass-chokidar --include-path ./node_modules/foundry-css/src resources/scss/ -o css/"
+    "scaffold": "./node_modules/foundry-css/bin/index.js",
+    "build": "node-sass-chokidar --include-path ./node_modules/foundry-css/src --include-path ./node_modules/foundation-sites/scss resources/scss/ -o css/"
   }
 }
