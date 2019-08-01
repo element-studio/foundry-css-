@@ -2,48 +2,50 @@
  * _shame.scss
  *
  * Need to write something hacky or smelly that you honestly intend to re-factor later? Dump it in here. But tidy up after yourself!
- * 
+ *
  */
 
 .foundry__section {
-	display:grid;
-	grid-template-columns: 1fr 3fr;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
 }
 
 #avatar-demo .avatar {
-	margin:0 2rem 2rem 0;
+    margin: 0 2rem 2rem 0;
 }
 
 #buttons-demo .button {
-	margin:0 2rem 2rem 0;
+    margin: 0 2rem 2rem 0;
 }
 
 #cards-demo {
-	display:grid;
-	grid-template-columns: 1fr 1fr 1fr;
-  	grid-gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
 }
 
 #icons-demo .icon {
-	margin:0 2rem 2rem 0;
+    margin: 0 2rem 2rem 0;
 }
 
 #tags-demo .tag {
-	margin:0 1rem 1rem 0;
+    margin: 0 1rem 1rem 0;
 }
 
 #tooltips-demo .button {
-	margin:0 1rem 1rem 0;
+    margin: 0 1rem 1rem 0;
 }
 
 #tooltips-demo .tooltip {
-	z-index:1;
+    z-index: 1;
 }
 
 #alerts-demo {
-	display:grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap:2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
 }
 
-body { padding-bottom:rhythm(3) }
+body {
+    padding-bottom: rhythm(3);
+}

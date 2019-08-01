@@ -1,15 +1,38 @@
-// Project-level theme (pulls in each individual component theme?)
-@import 'theme'; 
-
-// This is the root file in our foundry-css package - any vars left in here have the !default flag; they only count if they haven't been been set in the configs/themes above
-@import 'foundry'; 
+/*
+ * Foundry Core;
+ *
+ * Functions and dependencies which acts as the engine of Foundry
+ */
+@import 'foundry-core';
 
 /*
- * Add your own extensions and bespoke SCSS modules here;
+ * Project Theme;
  *
- * i.e. @import 'blocks/Button/button'; // Example import for project-level button classes
- * 
+ * Configures Foundry's UI styles - this should also pull in any seperate
+ * per-module configuration files.
+ */
+@import 'theme';
+
+/*
+ * Foundry UI;
+ *
+ * Foundry's UI styles along with a default theme. The default theme provides
+ * default values for any configuration not provided by the Project Theme.
+ */
+@import 'foundry-ui';
+
+/*
+ * Project SCSS Modules
+ *
+ * All project-level SCSS can be loaded in from here on out.
+ *
  */
 
- // Where problem pong CSS lives
+// @import 'blocks/Button/button';
+// @import 'components/Dialog/dialog;
+
+/*
+ * Shame
+ * A temporary home for smelly CSS we will clean up later.
+ */
 @import 'shame';
