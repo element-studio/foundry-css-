@@ -21,9 +21,9 @@
 	</section>
 
   	<section class="container container--medium foundry__section">
-	  	
+
 		<div></div>
-		
+
 		<div>
 			<h1>Heading One</h1>
 			<h2>Heading Two</h2>
@@ -34,7 +34,7 @@
 			<p style="max-width:60ch">Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 			<p style="max-width:60ch">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
 		</div>
-		
+
 	</section>
 
 	<section class="container container--medium">
@@ -46,12 +46,12 @@
 			<h5 class="color--mid">Avatar</h5>
 		</div>
 		<div>
-			<div>
+			<div class="breathe">
 				<img src="/images/twitter-avatar.jpg" alt="My face" class="avatar avatar--small" />
 				<img src="/images/twitter-avatar.jpg" alt="My face" class="avatar" />
 				<img src="/images/twitter-avatar.jpg" alt="My face" class="avatar avatar--medium" />
 				<img src="/images/twitter-avatar.jpg" alt="My face" class="avatar avatar--large" />
-			</div>	
+			</div>
 		</div>
 	</section>
 
@@ -59,36 +59,26 @@
 		<div>
 			<h5 class="color--mid">Buttons</h5>
 		</div>
-		<div>	
+		<div>
 			<div>
 				<button type="submit" class="button button--small">Press me</button>
 				<button type="submit" class="button button--small button--alpha">Press me</button>
 				<button type="submit" class="button button--small button--beta">Press me</button>
-				<button type="submit" class="button button--small button--gamma">Press me</button>
 			</div>
 			<div>
 				<button type="submit" class="button">Press me</button>
 				<button type="submit" class="button button--alpha">Press me</button>
 				<button type="submit" class="button button--beta">Press me</button>
-				<button type="submit" class="button button--gamma">Press me</button>
-			</div>
-			<div>
-				<button type="submit" class="button button--medium">Press me</button>
-				<button type="submit" class="button button--medium button--alpha">Press me</button>
-				<button type="submit" class="button button--medium button--beta">Press me</button>
-				<button type="submit" class="button button--medium button--gamma">Press me</button>
 			</div>
 			<div>
 				<button type="submit" class="button button--large">Press me</button>
 				<button type="submit" class="button button--large button--alpha">Press me</button>
 				<button type="submit" class="button button--large button--beta">Press me</button>
-				<button type="submit" class="button button--large button--gamma">Press me</button>
 			</div>
 			<div>
 				<button type="submit" class="button button--bordered">Press me</button>
-				<button type="submit" class="button button--bordered button--alpha">Press me</button>
-				<button type="submit" class="button button--bordered button--beta">Press me</button>
-				<button type="submit" class="button button--bordered button--gamma">Press me</button>
+				<button type="submit" class="button button--bordered--alpha">Press me</button>
+				<button type="submit" class="button button--bordered--beta">Press me</button>
 			</div>
 		</div>
 	</section>
@@ -98,7 +88,23 @@
 			<h5 class="color--mid">Cards</h5>
 		</div>
 		<div id="cards-demo">
+			<div class="card card--small flow--small">
+				<div class="breathe--small">
+					<img src="/images/twitter-avatar.jpg" alt="My face" class="avatar avatar--small vertical-align--middle" />
+					<h4 style="display:inline-block; margin-bottom:0">Alan Grant</h4>
+				</div>
+				<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+				<button class="button button--fullwidth button--gamma">Contact</button>
+			</div>
 			<div class="card flow--small">
+				<div class="breathe--small">
+					<img src="/images/twitter-avatar.jpg" alt="My face" class="avatar avatar--small vertical-align--middle" />
+					<h4 style="display:inline-block; margin-bottom:0">Alan Grant</h4>
+				</div>
+				<p>Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+				<button class="button button--fullwidth button--gamma">Contact</button>
+			</div>
+			<div class="card card--large flow--small">
 				<div class="breathe--small">
 					<img src="/images/twitter-avatar.jpg" alt="My face" class="avatar avatar--small vertical-align--middle" />
 					<h4 style="display:inline-block; margin-bottom:0">Alan Grant</h4>
@@ -153,7 +159,7 @@
 					<use xlink:href="#icon-love-letter"></use>
 				</svg>
 			</div>
-			
+
 		</div>
 	</section>
 
@@ -281,7 +287,7 @@
 		</div>
 	</section>
 
-	<section>	
+	<section>
 		<progress class="progress" max="100">15%</progress>
 	</section>
 
@@ -323,7 +329,7 @@
 			<path d="M44.6666667,44 L17.047619,44 C15.2066699,44 13.7142857,42.5076158 13.7142857,40.6666667 C13.7142857,38.8257175 15.2066699,37.3333333 17.047619,37.3333333 L44.6666667,37.3333333 C46.5076158,37.3333333 48,38.8257175 48,40.6666667 C48,42.5076158 46.5076158,44 44.6666667,44 Z M44.6666667,27.3333333 L3.33333333,27.3333333 C1.49238417,27.3333333 0,25.8409492 0,24 C0,22.1590508 1.49238417,20.6666667 3.33333333,20.6666667 L44.6666667,20.6666667 C46.5076158,20.6666667 48,22.1590508 48,24 C48,25.8409492 46.5076158,27.3333333 44.6666667,27.3333333 Z M44.6666667,10.6666667 L10.1904762,10.6666667 C8.34952702,10.6666667 6.85714286,9.1742825 6.85714286,7.33333333 C6.85714286,5.49238417 8.34952702,4 10.1904762,4 L44.6666667,4 C46.5076158,4 48,5.49238417 48,7.33333333 C48,9.1742825 46.5076158,10.6666667 44.6666667,10.6666667 Z"></path>
 		</symbol>
 		<symbol id="icon-note">
-			<path d="M40,48 L10.6666667,48 C4.77562934,48 1.18423789e-15,43.2243707 0,37.3333333 L0,5.33333333 C0,2.4 2.4,0 5.33333333,0 L32,0 C34.9455187,0 37.3333333,2.38781467 37.3333333,5.33333333 L42.6666667,5.33333333 C45.6121853,5.33333333 48,7.721148 48,10.6666667 L48,40 C48,44.418278 44.418278,48 40,48 Z M32,40 L32,5.33333333 L5.33333333,5.33333333 L5.33333333,37.3333333 C5.33333333,40.2666667 7.73333333,42.6666667 10.6666667,42.6666667 L32.4533333,42.6666667 C32.1519547,41.8099531 31.9986527,40.9081769 32,40 Z M13.3333333,32 L24,32 C25.4727593,32 26.6666667,33.1939073 26.6666667,34.6666667 C26.6666667,36.139426 25.4727593,37.3333333 24,37.3333333 L13.3333333,37.3333333 C11.860574,37.3333333 10.6666667,36.139426 10.6666667,34.6666667 C10.6666667,33.1939073 11.860574,32 13.3333333,32 Z M13.3333333,21.3333333 L24,21.3333333 C25.4727593,21.3333333 26.6666667,22.5272407 26.6666667,24 C26.6666667,25.4727593 25.4727593,26.6666667 24,26.6666667 L13.3333333,26.6666667 C11.860574,26.6666667 10.6666667,25.4727593 10.6666667,24 C10.6666667,22.5272407 11.860574,21.3333333 13.3333333,21.3333333 Z M13.3333333,10.6666667 L24,10.6666667 C25.4727593,10.6666667 26.6666667,11.860574 26.6666667,13.3333333 C26.6666667,14.8060927 25.4727593,16 24,16 L13.3333333,16 C11.860574,16 10.6666667,14.8060927 10.6666667,13.3333333 C10.6666667,11.860574 11.860574,10.6666667 13.3333333,10.6666667 Z M37.3333333,40 C37.3333333,41.4727593 38.5272407,42.6666667 40,42.6666667 C41.4727593,42.6666667 42.6666667,41.4727593 42.6666667,40 L42.6666667,10.6666667 L37.3333333,10.6666667 L37.3333333,40 Z"></path>	
+			<path d="M40,48 L10.6666667,48 C4.77562934,48 1.18423789e-15,43.2243707 0,37.3333333 L0,5.33333333 C0,2.4 2.4,0 5.33333333,0 L32,0 C34.9455187,0 37.3333333,2.38781467 37.3333333,5.33333333 L42.6666667,5.33333333 C45.6121853,5.33333333 48,7.721148 48,10.6666667 L48,40 C48,44.418278 44.418278,48 40,48 Z M32,40 L32,5.33333333 L5.33333333,5.33333333 L5.33333333,37.3333333 C5.33333333,40.2666667 7.73333333,42.6666667 10.6666667,42.6666667 L32.4533333,42.6666667 C32.1519547,41.8099531 31.9986527,40.9081769 32,40 Z M13.3333333,32 L24,32 C25.4727593,32 26.6666667,33.1939073 26.6666667,34.6666667 C26.6666667,36.139426 25.4727593,37.3333333 24,37.3333333 L13.3333333,37.3333333 C11.860574,37.3333333 10.6666667,36.139426 10.6666667,34.6666667 C10.6666667,33.1939073 11.860574,32 13.3333333,32 Z M13.3333333,21.3333333 L24,21.3333333 C25.4727593,21.3333333 26.6666667,22.5272407 26.6666667,24 C26.6666667,25.4727593 25.4727593,26.6666667 24,26.6666667 L13.3333333,26.6666667 C11.860574,26.6666667 10.6666667,25.4727593 10.6666667,24 C10.6666667,22.5272407 11.860574,21.3333333 13.3333333,21.3333333 Z M13.3333333,10.6666667 L24,10.6666667 C25.4727593,10.6666667 26.6666667,11.860574 26.6666667,13.3333333 C26.6666667,14.8060927 25.4727593,16 24,16 L13.3333333,16 C11.860574,16 10.6666667,14.8060927 10.6666667,13.3333333 C10.6666667,11.860574 11.860574,10.6666667 13.3333333,10.6666667 Z M37.3333333,40 C37.3333333,41.4727593 38.5272407,42.6666667 40,42.6666667 C41.4727593,42.6666667 42.6666667,41.4727593 42.6666667,40 L42.6666667,10.6666667 L37.3333333,10.6666667 L37.3333333,40 Z"></path>
 		</symbol>
 		<symbol id="icon-pin">
 			<path d="M19.8139543,13.8352946 C18.6046506,15.0588252 18,16.4705886 18,18.0705897 C18,19.6705885 18.6046506,21.058824 19.8139543,22.2352939 C21.0232555,23.4117662 22.4186057,24 24,24 C25.6744188,24 27.0930233,23.4117662 28.2558135,22.2352939 C29.4186061,21.058824 30,19.6705885 30,18.0705897 C30,16.4705886 29.3953494,15.0588252 28.1860457,13.8352946 C26.9767445,12.6117665 25.5813943,12 24,12 C22.4186057,12 21.0232555,12.6117665 19.8139543,13.8352946 Z M42,16.9723761 C42,20.77348 40.5,25.2596683 37.5,30.4309385 C34.5,35.6022111 31.5,39.8232048 28.5,43.093922 L24,48 C22.6875,46.6740342 21.0234384,44.8618778 19.0078128,42.5635375 C16.9921872,40.2651926 14.3203128,36.3756898 10.9921872,30.8950289 C7.6640616,25.4143635 6,20.77348 6,16.9723761 C6,12.287292 7.7578128,8.28729216 11.2734384,4.97237439 C14.7890616,1.65745889 19.0312512,0 24,0 C28.9687488,0 33.2109384,1.65745889 36.7265616,4.97237439 C40.2421872,8.28729216 42,12.287292 42,16.9723761 Z"></path>
